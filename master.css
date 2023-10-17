@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;600;700;800;900&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ‘Open Sans’, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+body{
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: gogo;
+    src: url(GOGOIA-Regular.ttf);
+}
+.nav-bar{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-bar1{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-search{
+    height: fit-content;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+    margin-left: 15px;
+}
+.nav-search i{
+    padding: 10px 10px;
+}
+.nav-search i:hover{
+    transform: scale(1.2);
+}
+.search{
+    width: 180px;
+    height: 30px;
+    padding: 2px 12px;
+    border: solid 1px black;
+    border-radius: 2px;
+}
+.search::placeholder{
+    color: black;
+}
+.nav-logo{
+    width: fit-content;
+    height: 100%;
+}
+.nav-logo img{    
+    height: 100%;
+    width: 120px;
+}
+.nav-icons{
+    font-size: 20px;
+    width: 220px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+.nav-icons i{
+    padding: 10px 10px;
+}
+.nav-icons i:hover{
+    transform: scale(1.2);
+}
+.nav-bar2{
+    width: 60%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: small;
+    z-index: 99;
+}
+.nav-bar2 a{
+    color: black;
+    position: relative;
+    padding-bottom: 6px;
+}
+.nav-bar2 a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar2 a:hover::after {
+    transform: scaleX(1);
+}
+.page{
+    position: absolute;
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right,#8A58FF,cyan);
+}
+.strip1{
+    height: 8%;
+    width: 25%;
+    background-color: white;
+    transform: skewY(-13deg);
+    margin-top: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.strip1 h2{
+    font-family: gogo;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.strip2{
+    width: 100%;
+    height: 30%;
+    background-color:white;
+    transform: skewY(-13deg);
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+}
+.strip2-head{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.strip2-head h1{
+    font-family: gogo;
+    letter-spacing: 10px;
+    margin-top: 15px;
+    color: #0068fa;
+    text-shadow: 0px 0px 30px rgb(179, 179, 235);
+}
+.strip2-head h1:nth-child(1){
+    margin-left: 3%;
+}
+.strip2-head h1:nth-child(2){
+    margin-right: 5%;
+}
+.strip3{
+    margin-left: 75%;
+    margin-top: -60px;
+    height: 8%;
+    width: 25%;
+    background-color: white;
+    transform: skewY(-13deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.strip3 h2{
+    font-family: gogo;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.strip2 img{
+    width: 60%;
+    height: 350%;
+    position: absolute;
+    margin-left: 100px;
+}
+.info{
+    margin-top: 10%;
+    position: relative;
+    width: 100%;
+    height: 28vh;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info p{
+    font-size: 30px;
+    font-family: gogo;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: white;
+}
+.info-email{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+}
+.email{
+    width: 500px;
+    height: 60px;
+    padding: 10px 30px;
+    background: transparent;
+    border: solid 2px white;
+    color: white;
+    font-size: larger;
+}
+.email::placeholder { 
+    color: white; 
+} 
+.button{
+    width: fit-content;
+    padding: 10px 30px;
+    height: 60px;
+    background-color: white;
+    border: none;
+    font-size: larger;
+    color: #0068fa;
+}
+.button:hover{
+    background-color: rgb(240, 240, 240);
+}
+@media screen and (min-width: 1920px) {
+    .nav-search {
+        font-size: 40px;
+        margin-left: 20px;
+        width: 260px;
+    }
+    .search {
+        width: 200px;
+        height: 40px;
+    }
+    .nav-logo img {
+        width: 170px;
+    }
+    .nav-icons {
+        font-size: 35px;
+        width: 260px;
+    }
+    .nav-bar2 {
+        width: 72%;
+        font-size: 22px;
+    }
+    .shoe img {
+        width: 80%;
+        height: 160%;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+    .strip1 {
+        height: 10%;
+        width: 30%;
+        margin-top: 285px;
+    }
+    .strip1 h2 {
+        font-size: 75px;
+    }
+    .strip2 {
+        height: 30%;
+        font-size: 112px;
+    }
+    .strip3 {
+        margin-left: 70%;
+        height: 10%;
+        width: 30%;
+    }
+    .strip3 h2 {
+        font-size: 75px;
+    }
+    .shoe img {
+        width: 70%;
+        height: 140%;
+        margin-top: 106px;
+        margin-left: 100px;
+    }
+    .info p {
+        font-size: 55px;
+    }
+    .email {
+        width: 560px;
+        height: 85px;
+        padding: 14px 50px;
+        font-size: 27px;
+    }
+    .button {
+        height: 85px;
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .nav-search {
+        height: fit-content;
+        width: 100px;
+        font-size: 12px;
+        margin-left: 0px;
+    }
+    .search {
+        width: 100px;
+        height: 30px;
+        display: none;
+    }
+    .nav-logo img {
+        height: 100%;
+        width: 80px;
+    }
+    .nav-icons {
+        font-size: 12px;
+        width: 100px;
+        margin-right: 0px;
+    }
+    .nav-icons i {
+        padding: 6px 6px;
+    }
+    .nav-bar2 {
+        width: 90%;
+        letter-spacing: 1px;
+        font-size: 8px;
+    }
+    .nav-bar2 a{
+        padding-left: 2px;
+    }
+    .strip1 {
+        height: 40px;
+        width: 40%;
+        margin-top: 100px;
+    }
+    .strip1 h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .strip2 {
+        height: 19%;
+        background-color: white;
+        margin-top:0px;
+        font-size: 34px;
+    }
+    .strip2-head h1{
+        letter-spacing: 1px;
+    }
+    .strip2-head h1:nth-child(1){
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2){
+        margin-right: 1%;
+    }
+    .strip3 {
+        margin-left: 60%;
+        margin-top: 0px;
+        height: 40px;
+        width: 40%;
+    }
+    .strip3 h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .strip2 img {
+        width: 50%;
+        height: 235%;
+        position: absolute;
+        margin-left: 48px;
+    }
+    .info{
+        justify-content: center;
+    }
+    .email {
+        width: 160px;
+        height: 40px;
+        padding: 5px 6px;
+        font-size: 11px;
+    }
+    .button {
+        padding: 2px 11px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .info-email {
+        margin-top: 10px;
+    }
+    .info p {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+}
+@media screen and (min-width:481px) and (max-width: 600px) {
+    .nav-search {
+        height: fit-content;
+        width: 100px;
+        font-size: 12px;
+        margin-left: 0px;
+    }
+    .search {
+        width: 100px;
+        height: 30px;
+        display: none;
+    }
+    .nav-logo img {
+        height: 100%;
+        width: 80px;
+    }
+    .nav-icons {
+        font-size: 12px;
+        width: 100px;
+        margin-right: 0px;
+    }
+    .nav-icons i {
+        padding: 6px 6px;
+    }
+    .nav-bar2 {
+        width: 90%;
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+    .nav-bar2 a{
+        padding-left: 2px;
+    }
+    .strip1 {
+        height: 52px;
+        width: 40%;
+        margin-top: 100px;
+    }
+    .strip1 h2 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .strip2 {
+        height: 23%;
+        background-color: white;
+        margin-top:0px;
+        font-size: 39px;
+    }
+    .strip2-head h1{
+        letter-spacing: 1px;
+    }
+    .strip2-head h1:nth-child(1){
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2){
+        margin-right: 1%;
+    }
+    .strip3 {
+        margin-left: 60%;
+        margin-top: 0px;
+        height: 52px;
+        width: 40%;
+    }
+    .strip3 h2 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .strip2 img {
+        width: 62%;
+        height: 250%;
+        position: absolute;
+        margin-left: 60px;
+    }
+    .info{
+        justify-content: center;
+    }
+    .email {
+        width: 160px;
+        height: 40px;
+        padding: 5px 6px;
+        font-size: 11px;
+    }
+    .button {
+        padding: 2px 11px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .info-email {
+        margin-top: 10px;
+    }
+    .info p {
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+}
+@media screen and (min-width:601px) and (max-width: 774px){
+    .nav-search {
+        width: 180px;
+        font-size: 14px;
+    }
+    .search {
+        width: 160px;
+        height: 24px;
+    }
+    .nav-logo img {
+        width: 100px;
+    }
+    .nav-icons {
+        font-size: 14px;
+        width: 180px;
+    }
+    .nav-bar2 {
+        width: 80%;
+        font-size: 11px;
+    }
+    .strip1 {
+        height: 7%;
+        width: 35%;
+        margin-top: 140px;
+    }
+    .strip3{
+        height: 7%;
+        width: 35%;
+        margin-left: 65%;
+        margin-top: -25px;
+    }
+    .strip1 h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+    .strip3 h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+    .strip2 {
+        margin-top: -25px;
+        font-size: 75px;
+    }
+    .strip2 img {
+        width: 55%;
+        height: 240%;
+        position: absolute;
+        margin-left: 90px;
+    }
+    .strip2-head h1 {
+        font-size: 160%;
+        letter-spacing: 2px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-right: 1%;
+    }
+    .info p{
+        font-size: 30px;
+    }
+    .email {
+        width: 350px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .button{
+        height: 50px;
+    }
+}
+@media screen and (min-width:651px) and (max-width: 700px){
+    .strip2 {
+        font-size: 70px;
+    }
+}
+@media screen and (min-width:601px) and (max-width: 650px){
+    .strip2 {
+        font-size: 65px;
+    }
+    .info p{
+        font-size: 25px;
+    }
+}
+@media screen and (min-width:775px) and (max-width: 949px){
+    .nav-search {
+        width: 180px;
+        font-size: 14px;
+    }
+    .search {
+        width: 160px;
+        height: 24px;
+    }
+    .nav-logo img {
+        width: 100px;
+    }
+    .nav-icons {
+        font-size: 14px;
+        width: 180px;
+    }
+    .nav-bar2 {
+        width: 80%;
+        font-size: 11px;
+    }
+    .strip1 {
+        height: 7%;
+        width: 35%;
+        margin-top: 160px;
+    }
+    .strip3{
+        height: 7%;
+        width: 35%;
+        margin-left: 65%;
+        margin-top: -40px;
+    }
+    .strip1 h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+    .strip3 h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+    .strip2 {
+        margin-top: -40px;
+        font-size: 80px;
+    }
+    .strip2 img {
+        width: 50%;
+        height: 235%;
+        position: absolute;
+        margin-left: 80px;
+    }
+    .strip2-head h1 {
+        font-size: 160%;
+        letter-spacing: 2px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-left: 1%;
+    }
+    .info p{
+        font-size: 30px;
+    }
+    .email {
+        width: 350px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .button{
+        height: 50px;
+    }
+}
+@media screen and (min-width:850px) and (max-width: 949px){
+    .strip2 {
+        margin-top: -45px;
+        font-size: 85px;
+    }
+    .strip2 img {
+        width: 55%;
+        height: 240%;
+        position: absolute;
+        margin-left: 80px;
+    }
+}
+@media screen and (min-width:900px) and (max-width: 949px){
+    .strip2 img {
+        width: 60%;
+        height: 260%;
+        position: absolute;
+        margin-left: 80px;
+    }
+}
+@media screen and (min-width:950px) and (max-width: 1099px){
+    .nav-search {
+        width: 200px;
+        font-size: 16px;
+    }
+    .search {
+        width: 180px;
+        height: 30px;
+    }
+    .nav-logo img {
+        width: 120px;
+    }
+    .nav-icons {
+        font-size: 16px;
+        width: 200px;
+    }
+    .nav-bar2 {
+        width: 80%;
+        font-size: 12px;
+    }
+    .strip1 {
+        height: 8%;
+        width: 35%;
+        margin-top: 170px;
+    }
+    .strip3{
+        height: 8%;
+        width: 35%;
+        margin-left: 65%;
+        margin-top: -45px;
+    }
+    .strip1 h2 {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+    .strip3 h2 {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+    .strip2 {
+        margin-top: -45px;
+        font-size: 80px;
+    }
+    .strip2 img {
+        width: 55%;
+        height: 285%;
+        position: absolute;
+        margin-left: 80px;
+    }
+    .strip2-head h1 {
+        font-size: 180%;
+        letter-spacing: 3px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-left: 3%;
+    }
+    .info p{
+        font-size: 30px;
+    }
+    .email {
+        width: 350px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .button{
+        height: 50px;
+    }
+
+}
+@media screen and (min-width:1100px) and (max-width: 1300px){
+    .strip2-head h1 {
+        letter-spacing: 0px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-left: 3%;
+    }
+}
+@media screen and (min-width:1100px) and (max-width: 1160px){
+    .strip1 h2 {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+    .strip3 h2 {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (min-width:1500px) and (max-width: 1750px){
+    .nav-search {
+        width: 250px;
+        font-size: 25px;
+    }
+    .search {
+        width: 205px;
+        height: 45px;
+    }
+    .nav-logo img {
+        width: 160px;
+    }
+    .nav-icons {
+        font-size: 25px;
+        width: 250px;
+    }
+    .nav-bar2 {
+        width: 70%;
+        font-size: 18px;
+    }
+    .strip1 h2 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    .strip3 h2 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    .strip2-head h1 {
+        font-size: 240%;
+        letter-spacing: 2px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 2%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-left: 5%;
+    }
+    .info p{
+        font-size: 55px;
+    }
+    .email {
+        width: 550px;
+        height: 75px;
+        font-size: 24px;
+    }
+    .button{
+        height: 75px;
+    }
+}
+@media screen and (min-width:1650px) and (max-width: 1750px){
+    .strip1 {
+        height: 10%;
+        width: 35%;
+        margin-top: 270px;
+    }
+    .strip1 h2 {
+        font-size: 50px;
+        letter-spacing: 7px;
+    }
+    .strip3 {
+        height: 10%;
+        width: 35%;
+        margin-left: 65%;
+        margin-top: -45px;
+    }
+    .strip3 h2 {
+        font-size: 50px;
+        letter-spacing: 7px;
+    }
+    .strip2 img {
+        width: 65%;
+        height: 350%;
+    }
+    .strip2-head h1 {
+        font-size: 250%;
+        letter-spacing: 5px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 1%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-right: 3%;
+    }
+}
+@media screen and (min-width:1751px) and (max-width: 1919px){
+    .nav-search {
+        width: 280px;
+        font-size: 30px;
+    }
+    .search {
+        width: 235px;
+        height: 50px;
+    }
+    .nav-logo img {
+        width: 170px;
+    }
+    .nav-icons {
+        font-size: 30px;
+        width: 280px;
+    }
+    .nav-bar2 {
+        width: 80%;
+        font-size: 20px;
+    }
+    .strip1 {
+        height: 10%;
+        width: 35%;
+        margin-top: 290px;
+    }
+    .strip1 h2 {
+        font-size: 45px;
+        letter-spacing: 5px;
+    }
+    .strip3 h2 {
+        font-size: 45px;
+        letter-spacing: 5px;
+    }
+    .strip2-head h1 {
+        font-size: 260%;
+        letter-spacing: 5px;
+    }
+    .strip2-head h1:nth-child(1) {
+        margin-left: 2%;
+    }
+    .strip2-head h1:nth-child(2) {
+        margin-left: 5%;
+    }
+    .info p{
+        font-size: 62px;
+    }
+    .email {
+        width: 600px;
+        height: 80px;
+        font-size: 24px;
+    }
+    .button{
+        height: 80px;
+    }
+
+}
